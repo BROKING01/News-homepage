@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    max-width: 100%;
+}
+ul{
+    list-style: none;
+}
+main{
+    max-width: 1100px;
+    z-index: 2;
+}
+nav{
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    gap: 32px;
+    cursor: pointer;
+}
+nav li{
+    color: hsl(236, 13%, 42%);
+}
+nav li:hover{
+    color: hsl(5, 85%, 63%);
+}
+.container{
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-height: 750px;
+}
+.blog{
+    grid-column: 2 span;
+    grid-row: 1 span;   
+}
+.info{
+    display: flex;
+    margin-top: 15px;
+}
+.info h1{
+    font-size: 45px;
+    color: hsl(240, 100%, 5%);
+    width: 300px;
+}
+.info p{
+    color: hsl(236, 13%, 42%);
+    line-height: 1.5;
+    width: 355px;
+}
+.info .des{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.info .des button{
+    padding: 15px 30px;
+    background-color: hsl(5, 85%, 63%);
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    font-weight: 800;
+    color: hsl(240, 100%, 5%);
+    letter-spacing: 5px;
+}
+.info .des button:hover{
+    background-color: hsl(240, 100%, 5%);
+    color: white;
+}
+.news{
+    grid-column: 1 span;
+    grid-row: 1 span;
+    background-color: hsl(240, 100%, 5%);
+    color: white;
+}
+.content{
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+}
+.content h2{
+    color: hsl(35, 77%, 62%);
+    font-size: 30px;
+}
+.content .all{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 30px;
+}
+.content .all .new{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.content .all .new h3{
+    cursor: pointer;
+}
+.content .all .new h3:hover{
+    color: hsl(35, 77%, 62%);
+}
+.content .all .new p{
+    color: hsl(233, 8%, 79%);
+}
+hr{
+    margin-top: 20px;
+}
+.tops{
+    display: flex;
+    grid-column: 3 span;
+    grid-row: 1 span;
+    gap: 15px;
+}
+.top{
+    display: flex;
+    align-items: center;
+    height: fit-content;
+}
+.top img{
+    width: 100px;
+}
+.top h2{
+    color: hsl(5, 85%, 63%);
+}
+.top p{
+    color: hsl(236, 13%, 42%);
+}
+.top h3{
+    color: hsl(240, 100%, 5%);
+    cursor: pointer;
+}
+.top h3:hover{
+    color: hsl(5, 85%, 63%);
+}
+.top .info2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 15px;
+    height: 127px;
+}
+.menu{
+    
+    cursor: pointer;
+}
+.hidden{
+    display: none;
+}
+aside ul{
+    position: absolute;
+    background-color: white;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    z-index: 3;
+}
+aside li{
+    font-size: 25px;
+    padding: 20px 30px;
+}
+aside button{
+    margin-top: 50px;
+    margin-left: 300px;
+    margin-bottom: 50px;
+    width: 50px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width:800px) {
+    body{
+        align-items: flex-start;
+    }
+    nav{
+        padding-inline: 15px;
+    }
+    nav ul{
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+    .container{
+        padding-inline: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+    }
+    .tops{
+        display: flex;
+        flex-direction: column;
+    }
+    .info{
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+    }
+    .des{
+        gap: 30px;
+        width: 100%;
+    }
+    .info h1, .des p{
+        width: 100%;
+    }
+}
